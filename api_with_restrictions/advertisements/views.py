@@ -18,7 +18,8 @@ class AdvertisementViewSet(ModelViewSet):
     serializer_class = AdvertisementSerializer
     permission_classes = [IsAuthenticated, IsOwnerOrReadOnly]
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
-    filter_class = AdvertisementFilter
+    filterset_class = AdvertisementFilter
+    filterset_fields = ['creator',]
     search_fields = ["status", "created_at"]
     ordering_fields = ["creator", "created_at"]
     throttle_classes = [UserRateThrottle, AnonRateThrottle]

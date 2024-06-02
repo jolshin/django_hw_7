@@ -3,7 +3,7 @@
 @baseUrl = http://localhost:8000/api
 
 # получение объявлений
-GET {{baseUrl}}/advertisements/2
+GET {{baseUrl}}/advertisements/
 Content-Type: application/json
 
 ###
@@ -61,7 +61,7 @@ Content-Type: application/json
 ###
 
 # фильтрация по дате
-GET {{baseUrl}}/advertisements/?created_at_after=2021-08-17
+GET {{baseUrl}}/advertisements/?created_at_before=2020-08-17
 Content-Type: application/json
 
 ###
